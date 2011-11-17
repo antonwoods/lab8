@@ -6,7 +6,7 @@ Lab8::Application.routes.draw do
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
  
- # get "pages/about"
+  get "pages/about"
 
   #get "pages/help"
 
