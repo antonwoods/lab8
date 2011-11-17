@@ -2,4 +2,11 @@
 <html>
 <head>
   <title><%= @title %></title>
-  <%= stylesheet_link_tag    "application" %>
+
+</head>
+<body>
+<%= render 'layouts/header'%>
+<%= render 'layouts/nav'%>
+<%= yield %>
+<%= render 'layouts/tail'%>
+
