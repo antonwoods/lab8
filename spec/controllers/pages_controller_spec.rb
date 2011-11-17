@@ -16,9 +16,9 @@ describe PagesController do
       response.should have_selector("title", :content => "about")
     end
  
-      it "should have the right header" do
+      it "should have the right CurrentVotingTitle" do
       get 'about'
-      response.should have_selector("CurrentVotingTitle", :content => "Pages#about")
+      response.should have_selector("div", :content => "Pages#about")
     end
 
   end
@@ -32,9 +32,9 @@ describe PagesController do
       get 'help'
       response.should have_selector("title", :content => "help")
     end
-     it "should have the right header" do
+     it "should have the right CurrentVotingTitle" do
       get 'help'
-      responseshould have_selector("CurrentVotingTitle", :content => "Pages#help")
+      response.should have_selector("div", :content => "Pages#help")
     end
   end
 
@@ -47,9 +47,9 @@ describe PagesController do
       get 'contact'
       response.should have_selector("title", :content => "contact")
     end
-     it "should have the right header" do
+     it "should have the right CurrentVotingTitle" do
       get 'contact'
-      response.should have_selector("CurrentVotingTitle", :content => "Pages#contact")
+      response.should have_selector("div", :content => "Pages#contact")
     end
   end
 
