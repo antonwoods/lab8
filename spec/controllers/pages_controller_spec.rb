@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 describe PagesController do
+  
+    render_views
+
 
   describe "GET 'about'" do
     it "returns http success" do
@@ -15,7 +18,7 @@ describe PagesController do
  
       it "should have the right header" do
       get 'about'
-      response.should have_selector("CurrentVotingTitle", :content => "pages#about")
+      response.should have_selector("CurrentVotingTitle", :content => "Pages#about")
     end
 
   end
@@ -31,7 +34,7 @@ describe PagesController do
     end
      it "should have the right header" do
       get 'help'
-      responseshould have_selector("CurrentVotingTitle", :content => "pages#help")
+      responseshould have_selector("CurrentVotingTitle", :content => "Pages#help")
     end
   end
 
@@ -46,7 +49,7 @@ describe PagesController do
     end
      it "should have the right header" do
       get 'contact'
-      response.should have_selector("CurrentVotingTitle", :content => "pages#contact")
+      response.should have_selector("CurrentVotingTitle", :content => "Pages#contact")
     end
   end
 
