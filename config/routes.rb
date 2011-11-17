@@ -1,12 +1,12 @@
 Lab8::Application.routes.draw do
   
-  #root :to => 'pages#contact'
+  root :to => 'pages#contact'
   
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
  
-  get "pages/about"
+  #get "pages/about"
 
   #get "pages/help"
 
