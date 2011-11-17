@@ -2,7 +2,7 @@
 /* CSS Document */
 
 
-.body{padding:none;}
+
 
 #pageheader{
 position:absolute;
@@ -21,7 +21,6 @@ top:0px;
 width:980px;
 height:50px;
 background-color:#00ffff;
-padding:none;
 }
 
 
@@ -115,5 +114,6 @@ height:1200px;
 		position:absolute; right:250px; height:20px; top:0px; width:200px;
 		}
 		#pageheadertitle{
-			 font:Georgia, 'Times New Roman', Times, serif; position:absolute; font-size:24px; color:#666;  left:20px; top:0px; width:auto; height:20px;
+			
+			  position:absolute; font-size:24px; color:#666;  left:20px; top:0px; width:auto; height:20px;
 			 }
