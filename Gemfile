@@ -14,6 +14,7 @@ end
 group :development, :test do
    gem 'sqlite3', '1.3.4', :require => 'sqlite3'
    gem 'cucumber', '~> 1.1.0'
+   
 end
 
 
@@ -47,6 +48,7 @@ group :development do
    gem 'rspec-rails', '~> 2.7.0'
    gem 'annotate', '~> 2.4.0'
    gem 'faker', '~> 1.0.1'
+  
 end
 
 group :test do
