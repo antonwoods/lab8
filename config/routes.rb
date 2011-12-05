@@ -1,10 +1,15 @@
 Lab8::Application.routes.draw do
   
+  resources :users
   root :to => 'pages#contact'
+  
   
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
+ 
+  match '/signup', :to => 'users#new'
+ 
  
   #get "pages/about"
 
