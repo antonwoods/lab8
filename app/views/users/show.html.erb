@@ -1,3 +1,7 @@
 <div id="CurrentVotingTitle">
 <%= @user.name %>, <%= @user.email %>
+<%= gravatar_image_tag @user.email, :class => "gravatar"%>
+<%= gravatar_for @user, :size => 30 %>
+
+<h1><%= @user.name %></h1>
 </div>
