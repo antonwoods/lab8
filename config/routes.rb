@@ -1,6 +1,10 @@
 Lab8::Application.routes.draw do
   
+  get "sessions/new"
+
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+  
   root :to => 'pages#contact'
   
   
@@ -9,6 +13,8 @@ Lab8::Application.routes.draw do
   match '/help', :to => 'pages#help'
  
   match '/signup', :to => 'users#new'
+  match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
  
  
   #get "pages/about"

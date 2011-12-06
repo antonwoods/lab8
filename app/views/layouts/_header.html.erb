@@ -5,6 +5,19 @@ We The Students
 </div>
 
 <div id="loginbox">
+	
+	<% if signed_in? %>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><%= link_to "Sign out", signout_path, :method => :delete%></td>
+  </tr>
+</table>
+
+	<%else%>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td>Email</td>
@@ -14,6 +27,8 @@ We The Students
     <td><input name="submit" type="button" value="Login"></td>
   </tr>
 </table>
+
+<%end%>
 </div>
 
 </div>
