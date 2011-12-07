@@ -32,16 +32,16 @@ describe User do
   it "should accept valid email addresses" do
     addresses = %w[user@foo.com THE_USER@foo.bar.org first.last@foo.jp]
     addresses.each do |address|
-      valid_email_user = User.new(@arrtib.merge(:email => address))
+      valid_email_user = User.new(@attrib.merge(:email => address))
       valid_email_user.should be_valid
     end
   end
   
   
   it "should reject invalid email addresses" do
-    addresses = %w[user@foo.com user_at_foo.org example.user@foo.]
-    addresses.each do |addresses|
-      invalid_email_user = User.new(@arrtib.merge(:email => address))
+    addresses = %w[user@foo,com user_at_foo.org example.user@foo.]
+    addresses.each do |address|
+      invalid_email_user = User.new(@attrib.merge(:email => address))
       invalid_email_user.should_not be_valid
     end
   end
@@ -55,12 +55,12 @@ describe User do
  
  it "should reject email addresses identical up to case" do
     upcase_email = @attrib[:email].upcase
-    User.create!(@attrib.merge(:email => upcased_email))
+    User.create!(@attrib.merge(:email => upcase_email))
     user_with_duplicate_email = User.new(@attrib)
     user_with_duplicate_email.should_not be_valid
   end
  
-end
+
   
   
   
@@ -87,7 +87,7 @@ end
       end
     
      it "should reject long passwords" do
-       short = "a" * 41
+       long = "a" * 41
        hash  = @attrib.merge(:password => long, :password_confirmation => long)
       User.new(hash).should_not be_valid
       end
@@ -108,7 +108,7 @@ end
         describe "has_password? method" do
         
           it "should be true if the passwords match" do
-            @user.has_passoword?(@attrib[:password]).should be_true
+            @user.has_password?(@attrib[:password]).should be_true
           end
           
           it "should be false if the passwords don't match" do
@@ -135,4 +135,5 @@ end
       
       end
   end
+end
 end
