@@ -116,6 +116,17 @@ describe UsersController do
                     get :show, :id => @user
                     response.should have_selector("h1>img", :class => "gravitar")
                   end
+                  
+                  
+  it "should show the user's ideas" do
+      mp1 = Factory(:idea, :user => @user, :title => "Foo bar")
+      mp2 = Factory(:idea, :user => @user, :title => "Baz quux")
+      get :show, :id => @user
+      response.should have_selector("span.content", :title => mp1.content)
+      response.should have_selector("span.content", :title => mp2.content)
+    end
+    
+    
         end
   
   

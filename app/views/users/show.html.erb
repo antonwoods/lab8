@@ -5,3 +5,19 @@
 
 <h1><%= @user.name %></h1>
 </div>
+
+
+<table class="profile">
+  <tr>
+    <td class="main">
+      
+      <% unless @user.ideas.empty? %>
+        <table class="microposts" summary="User microposts">
+          <%= render @ideas %>
+        </table>
+        <%= will_paginate @ideas %>
+      <% end %>
+    </td>
+   
+  </tr>
+</table>

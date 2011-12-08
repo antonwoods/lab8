@@ -4,8 +4,9 @@ Lab8::Application.routes.draw do
 
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :ideas, :only => [:create, :destroy]
   
-  root :to => 'pages#contact'
+  root :to => 'pages#home'
   
   
   match '/contact', :to => 'pages#contact'
