@@ -1,15 +1,10 @@
-<% if current_user.admin? %>
-
-<%= form_for @idea do |f| %>
+<%= form_for @idearesponse do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
   <div class="field">
-    <%= f.text_area :title %>
+    <%= f.text_field :title %>
   </div>
   <div class="actions">
     <%= f.submit "Submit" %>
   </div>
 <% end %>
 
-<%else%>
-You are not an admin, sorry
-<% end %>
