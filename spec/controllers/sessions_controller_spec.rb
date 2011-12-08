@@ -3,7 +3,7 @@ require 'spec_helper'
 describe SessionsController do
 render_views
 
-describe "DELETE 'destroy" do
+describe "DELETE 'destroy'" do
   it "should sign a user out" do
     test_sign_in(Factory(:user))
     delete :destroy

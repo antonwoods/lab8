@@ -11,7 +11,8 @@ We The Students
   <tr>
     <td></td>
     <td></td>
-    <td></td>
+       <td><%= link_to "Settings", edit_user_path(current_user)%></td>
+
     <td></td>
     <td><%= link_to "Sign out", signout_path, :method => :delete%></td>
   </tr>
@@ -20,11 +21,12 @@ We The Students
 	<%else%>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td>Email</td>
-    <td><input name="email" type="text"></td>
-    <td>Password</td>
-    <td><input name="password" type="text"></td>
-    <td><input name="submit" type="button" value="Login"></td>
+  	    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+
+    <td><%= link_to "Sign in", signin_path%></td>
+   
   </tr>
 </table>
 
