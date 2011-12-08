@@ -65,6 +65,29 @@ describe User do
   
   
   
+  describe "admin attributes" do
+  before(:each) do
+  @user = User.create!(@attrib)
+  end
+  
+  it "should respons to admin" do
+    @user.should respond_to(:admin)
+  end
+  
+  it "should not be an admin by default" do
+    @user.should_not be_admin
+  end
+  
+  it "should be convertable to an admin" do
+    @user.toggle!(:admin)
+    @user.should be_admin
+  end
+  end
+  
+  
+  
+  
+  
   describe "password validation" do
       
    
@@ -107,13 +130,13 @@ describe User do
         
         describe "has_password? method" do
         
-          it "should be true if the passwords match" do
-            @user.has_password?(@attrib[:password]).should be_true
-          end
-          
-          it "should be false if the passwords don't match" do
-            @user.has_password?("invalid").should be_false
-          end 
+            it "should be true if the passwords match" do
+              @user.has_password?(@attrib[:password]).should be_true
+            end
+            
+            it "should be false if the passwords don't match" do
+              @user.has_password?("invalid").should be_false
+            end 
       end
       
       describe "authentication method" do
