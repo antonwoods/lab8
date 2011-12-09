@@ -1,6 +1,10 @@
 <% unless @feed_items.empty? %>
-  <table class="ideas" summary="User ideas">
+  <table id="HistoryFrame">
+  	<tr><td colspan="3">
+  		
+  		  <%= will_paginate @feed_items %>
+
+  	</td></tr>
     <%= render :partial => 'shared/feed_admin_data', :collection => @feed_items %>
   </table>
-  <%= will_paginate @feed_items %>
 <% end %>

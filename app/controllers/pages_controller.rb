@@ -8,8 +8,8 @@ class PagesController < ApplicationController
      # @feed_items = current_user.feed.paginate(:page => params[:page])
      #--@feed_items = User.find_by_id(1).feed.paginate(:page => params[:page])
  @adminuser = User.find(1)
-  @feed_items = @adminuser.ideas.paginate(:page => params[:page])
-  
+  @feed_items = @adminuser.ideas.paginate(:per_page => 5, :page => params[:page])
+  @feedpubic_items =  @adminuser.ideas.paginate(:per_page => 1, :page => params[:page])
     @response = Response.new
     end
   end

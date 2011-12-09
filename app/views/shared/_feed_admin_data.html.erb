@@ -14,18 +14,7 @@
   </td>
   <td>
   	
-  <% @responses = Response.find(:all, :conditions => "user_id = '#{feed_admin_data.id}'" )%>
-
-<ul class="resulta">
-	<% unless @responses.empty? %>
-
-  <% @responses.each do |response| %>
-    <li>
-           <%= response.voice %>
-    </li>
-  <% end %>
-  <% end %>
-</ul>
+  
   	
   </td>
   
@@ -38,3 +27,19 @@
   </td>
   <% end %>
 </tr>
+
+
+
+<% @responses = Response.find(:all, :conditions => "responseid = '#{feed_admin_data.id}'" )%>
+<tr><td colspan="3">
+<ul class="resulta">
+	<% unless @responses.empty? %>
+
+  <% @responses.each do |response| %>
+    <li>
+           <%= response.voice %>
+    </li>
+  <% end %>
+  <% end %>
+</ul>
+</td></tr>

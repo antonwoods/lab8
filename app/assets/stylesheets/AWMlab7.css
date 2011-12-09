@@ -10,7 +10,7 @@ left:0px;
 top:0px;
 width:100%;
 height:30px;
-background-color:#ff00ff;
+background-color:#ff6600;
 }
 
 #Navheader{
@@ -20,12 +20,12 @@ left:0px;
 top:0px;
 width:980px;
 height:50px;
-background-color:#00ffff;
+background-color:#ff6600;
 }
 
 
 #frame {
-background-color: lime;
+background-color: #000066;
 overflow:visible;
 text-align: center;
 width:980px;
@@ -76,7 +76,7 @@ height:30px;
 	z-index:100;
 }
 #CurrentVotingOptions{
-	background-color:#FF0;
+	background-color:#cc5500;
 	font-size:18px;
 	text-decoration:none;
 	position:absolute;
@@ -90,7 +90,7 @@ height:1200px;
 }
 
 #HistoryFrame{
-	background-color:#936;
+	background-color:#FFFFFF;
 	font-size:18px;
 	text-decoration:none;
 	position:absolute;
@@ -102,9 +102,9 @@ height:1200px;
 	height: 583px;
 	z-index:100;
 }
-#HistoryContent{position:absolute; left:0px; top:50px; height:499px; width:677px; background-color:#C00; overflow:auto;}
+#HistoryContent{position:absolute; left:0px; top:50px; height:499px; width:677px; background-color:#ccffff; overflow:auto;}
 #HistoryTitle{
-	position:absolute; left:0px; top:0px; background-color:#066; font-size:24px; font-variant:small-caps;
+	position:absolute; left:0px; top:0px; background-color:#FFFFFF; font-size:24px; font-variant:small-caps;
 	}
 
 #questiontitle{ font-size:16px; font-weight:bold; font-family:Tahoma, Geneva, sans-serif;

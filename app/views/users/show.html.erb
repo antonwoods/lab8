@@ -1,12 +1,23 @@
-<div id="CurrentVotingTitle">
-<%= @user.name %>, <%= @user.email %>
-<%= gravatar_image_tag @user.email, :class => "gravatar"%>
-<%= gravatar_for @user, :size => 30 %>
 
-<h1><%= @user.name %></h1>
-</div>
+<div id="CurrentVotingTitle"><%= gravatar_for @user, :size => 20 %> : <%= @user.name %>
+<div>
+<div id="CurrentVotingOptions">
+	
+	Their contact info
 
+		<%= @user.name %>, <%= @user.email %>
+        
+	</div>
+	</div>
+	
+	
+	
+	
+<div id="HistoryFrame">
+<div id="HistoryTitle" >Past questions</div>
 
+<div id="HistoryContent">
+	 
 <table class="profile">
   <tr>
     <td class="main">
@@ -21,3 +32,8 @@
    
   </tr>
 </table>
+	</div>
+
+</div>
+
+

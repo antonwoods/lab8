@@ -1,11 +1,22 @@
 <% if signed_in? %>
-  <table class="front" summary="For signed-in users">
-    <tr>
-      <td class="main">
-        <h1 class="micropost">What's up?</h1>
-        <%= render 'shared/idea_form' %>
+
+<div id="CurrentVotingTitle">Current Question
+<div>
+<div id="CurrentVotingOptions">
+	
+	<%= render 'shared/idea_form' %>
         
-          <% if current_user.admin? %>
+	</div>
+	</div>
+	
+	
+	
+	
+<div id="HistoryFrame">
+<div id="HistoryTitle" >Past questions</div>
+
+<div id="HistoryContent">
+	  <% if current_user.admin? %>
 
         			<%= render 'shared/feed_admin' %>
 			<% else %>
@@ -13,20 +24,15 @@
         
         
         <%end if%>
-      </td>
-      <td class="sidebar round">
-        <%= render 'shared/user_info' %>
-      </td>
-    </tr>
-  </table>
-<% else %>
-  <h1>Sample App</h1>
+	</div>
 
-  <p>
-    This is the home page for the
-    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
-  </p>
+</div>
+
+
+<% else %>
+  <h1>Let your voice be heard</h1>
+
+
 
   <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
 <% end %>

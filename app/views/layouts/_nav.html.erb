@@ -1,6 +1,16 @@
 <div id="frame">
 <div id="Navheader"><br>
-<span id="JumpList"><%= link_to "about", about_path %></span>
-<span id="JumpList"><%= link_to "contact", contact_path %></span>
+	<% if signed_in? %>
+
+<span id="JumpList"><%= link_to "Ideas i've posted", user_path(current_user)%></span>
+
+<span id="JumpList"><%= link_to "Settings", edit_user_path(current_user)%></span>
+<span id="JumpList"><%= link_to "Other Students", users_path%></span>
+<%end%>
 <span id="JumpList"> <%= link_to "help", help_path%></span>
+<% if signed_in? %>
+<span id="JumpList"><%= render 'shared/user_info' %></span>
+
+        
+<%end%>
 </div>

@@ -3,13 +3,14 @@
 <%= form_for @idea do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
   <div class="field">
-    <%= f.text_area :title %>
+    <%= f.text_field :title %>
   </div>
   <div class="actions">
     <%= f.submit "Submit" %>
   </div>
 <% end %>
+your status: {officer}
 
 <%else%>
-You are not an admin, sorry
+your status: {member}
 <% end %>
