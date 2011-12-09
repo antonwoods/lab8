@@ -9,5 +9,6 @@ class Idea < ActiveRecord::Base
   
     default_scope :order => 'ideas.created_at DESC'
 
+  has_many :responses, :dependent => :destroy
 
 end

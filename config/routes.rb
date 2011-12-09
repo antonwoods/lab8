@@ -5,6 +5,7 @@ Lab8::Application.routes.draw do
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
   resources :ideas, :only => [:create, :destroy]
+  resources :responses
   
   root :to => 'pages#home'
   

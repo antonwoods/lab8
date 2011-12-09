@@ -4,7 +4,15 @@
       <td class="main">
         <h1 class="micropost">What's up?</h1>
         <%= render 'shared/idea_form' %>
-        <%= render 'shared/feed' %>
+        
+          <% if current_user.admin? %>
+
+        			<%= render 'shared/feed_admin' %>
+			<% else %>
+            <%= render 'shared/feed' %>
+        
+        
+        <%end if%>
       </td>
       <td class="sidebar round">
         <%= render 'shared/user_info' %>

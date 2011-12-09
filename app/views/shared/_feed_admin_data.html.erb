@@ -1,0 +1,40 @@
+<tr>
+  <td class="gravatar">
+    <%= link_to gravatar_for(feed_admin_data.user), feed_admin_data.user %>
+  </td>
+  <td class="micropost">
+    <span class="user">
+    	
+      <%==feed_admin_data.user.name%> posted this question: 
+    </span>
+    <span class="content"><%= feed_admin_data.title %><%= feed_admin_data.id %></span>
+    <span class="timestamp">
+      Posted <%= time_ago_in_words(feed_admin_data.created_at) %> ago.
+    </span>
+  </td>
+  <td>
+  	
+  <% @responses = Response.find(:all, :conditions => "user_id = '#{feed_admin_data.id}'" )%>
+
+<ul class="resulta">
+	<% unless @responses.empty? %>
+
+  <% @responses.each do |response| %>
+    <li>
+           <%= response.voice %>
+    </li>
+  <% end %>
+  <% end %>
+</ul>
+  	
+  </td>
+  
+  
+  <% if current_user?(feed_admin_data.user) %>
+  <td>
+    <%= link_to "delete", feed_admin_data, :method => :delete,
+                                     :confirm => "You sure?",
+                                     :title => feed_admin_data.title %>
+  </td>
+  <% end %>
+</tr>

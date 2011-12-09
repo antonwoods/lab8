@@ -7,12 +7,14 @@ class UsersController < ApplicationController
  def index
    @title = "All Users"
    @users = User.paginate(:page => params[:page])
+     @response = Response.new
  end
  
 def show
   @user = User.find(params[:id])
   @ideas = @user.ideas.paginate(:page => params[:page])
   @title = @user.name
+
 end
 
 def new

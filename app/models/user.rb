@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  
+  has_many :responses
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation # tells Ruby which properties can be edited from outside
   
